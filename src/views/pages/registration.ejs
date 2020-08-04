@@ -1,0 +1,33 @@
+<%- include ('../partials/header.ejs') %>
+
+
+<div class="container py-4">
+    <div class="row">
+        <div class="col-12">
+            <h1>Registration</h1>
+        </div>
+        <div class="col-12">
+            <form id="registrationForm" name="registrationForm" action="" method="post">
+                <div class="mb-2">
+                    <label class="d-block" for="username">Username:</label>
+                    <input name="username" id="username" type="text"/>
+                </div>
+                <div class="mb-4">
+                    <label class="d-block" for="password">Password:</label>
+                    <input name="password" id="password" type="password"/>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-auto">
+                        <input type="submit" value="Register">
+                    </div>
+                    <div class="col-12 col-lg-auto">
+                        <a href="/">Login</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%- include ('../partials/footer.ejs') %>
