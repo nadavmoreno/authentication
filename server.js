@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const path = require('path');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
-const session = require('express-session');
 
 const app = express();
 const port = 4003;
@@ -14,7 +13,6 @@ app.use(morgan('tiny'));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
-app.use(session({secret: 'nm'}));
 require('./src/config/passport.js')(app);
 
 app.use(express.static(path.join(__dirname, '/public/')));
